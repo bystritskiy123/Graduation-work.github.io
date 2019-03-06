@@ -1,0 +1,230 @@
+$color-text:black;
+$color-fon:red;
+
+@mixin text {
+    font-family: "amsterdam";
+    font-style: "regular";
+    font-size: 120%;
+    color: $color-text;
+}
+
+@font-face {
+    font-family: 'amsterdam';
+    src: url(./font/amsterdam.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("./font/open-sans.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'AdineKirnberg';
+    src: url("./font/adine-kirnberg.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'SchoolBook';
+    src: url("./font/schoolbook.ttf") format("truetype");
+}
+
+#header {
+    display: inline-block;
+    z-index: 10;
+
+    .row {
+        .part_1 {
+            .form-inline {
+                margin-top: 5%;
+                margin-left: 5%;
+            }
+        }
+
+        .part_2 {
+            img {
+                margin-left: 50%;
+            }
+
+            h2 {
+                margin-left: 40%;
+                font-family: 'SchoolBook';
+                font-style: 'regular';
+                font-size: 200%;
+            }
+        }
+    }
+
+    .part_3 {
+        .nav {
+            margin-left: 80%;
+            width: 20%;
+        }
+    }
+}
+
+#menu {
+    display: inline-block;
+    z-index: 10;
+    position: fixed;
+    border: 1px solid black;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    background-color: white;
+
+    .nav {
+        margin-left: 45%;
+
+        .text_nav {
+            color: $color-text;
+            text-decoration: none;
+            font-family: 'AdineKirnberg';
+            font-style: 'regular';
+            font-size: 320%;
+        }
+    }
+}
+
+
+.cd-main-content {
+    .cd-gallery {
+
+        .mix {
+            border: 1px solid black;
+
+            .text {
+                @include text;
+                font-size: 200%;
+            }
+
+            .button_card {
+                background: $color-fon;
+                border-radius: 10px 10px 10px 10px;
+                margin-left: 18%;
+                cursor: pointer;
+                padding: 1% 2%;
+                @include text;
+            }
+        }
+    }
+}
+
+#footer {
+    margin-top: 5%;
+    background-color: $color-fon;
+
+    .row {
+        margin-left: 40%;
+    }
+
+    h2 {
+        @include text;
+        margin-left: 1%;
+        font-size: 150%;
+    }
+
+    .web {
+        margin-left: 1%;
+    }
+}
+
+
+@media (min-width:360px) and (max-width:810px) {
+    #header {
+        .row {
+            .part_2 {
+                img {
+                    margin-left: 47%;
+                }
+
+                .text_header {
+                    margin-left: 30%;
+                }
+            }
+
+            .part_3 {
+                .nav {
+                    margin-left: 50%;
+                }
+            }
+        }
+    }
+
+    #menu {
+        .nav {
+            margin-left: 20%;
+        }
+    }
+
+    .cd-main-content {
+        .cd-gallery {
+            .mix {
+                margin-top: 5%;
+                margin-left: 3%;
+                width: 45%;
+
+                .card-body {
+                    .button_card {
+                        margin-left: 1%;
+                    }
+                }
+            }
+        }
+    }
+
+    #footer {
+        .row {
+            margin-left: 5%;
+        }
+    }
+}
+
+@media (min-width:768px) and (max-width:1020px) {
+    #header {
+        .row {
+            .part_3 {
+                .nav {
+                    margin-left: 80%;
+                }
+            }
+        }
+    }
+
+    #menu {
+        .nav {
+            margin-left: 40%;
+        }
+    }
+
+    .cd-main-content {
+        .cd-gallery {
+            .mix {
+                .card-body {
+                    .button_card {
+                        margin-left: 20%;
+                    }
+                }
+            }
+        }
+    }
+
+    #footer {
+        .row {
+            margin-left: 30%;
+        }
+    }
+}
+
+@media (min-width:1024px) and (max-width:1360px) {
+    .cd-main-content {
+        .cd-gallery {
+            .mix {
+                .card-body {
+                    .button_card {
+                        margin-left: 23%;
+                    }
+                }
+            }
+        }
+    }
+}

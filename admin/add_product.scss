@@ -1,0 +1,220 @@
+$color-text:black;
+$color-fon:red;
+
+@mixin header {
+    font-family: "schoolbook";
+    font-style: "regular";
+}
+
+@mixin card-text {
+    font-family: "schoolbook";
+    font-style: "regular";
+    font-size: 120%;
+}
+
+@mixin text {
+    font-family: "amsterdam";
+    font-style: "Regular";
+    font-size: 120%;
+}
+
+
+@font-face {
+    font-family: 'amsterdam';
+    src: url("./font/amsterdam.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("./font/open-sans.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'AdineKirnberg';
+    src: url("./font/adine-kirnberg.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'SchoolBook';
+    src: url("./font/schoolbook.ttf") format("truetype");
+}
+
+
+#header {
+    display: inline-block;
+    z-index: 10;
+
+    .row {
+        .part_1 {
+            .form-inline {
+                margin-top: 5%;
+                margin-left: 5%;
+            }
+        }
+
+        .part_2 {
+            img {
+                margin-left: 50%;
+            }
+
+            .text_header {
+                margin-left: 30%;
+                font-family: 'SchoolBook';
+                font-style: 'regular';
+            }
+        }
+    }
+
+    .part_3 {
+        .nav {
+            margin-left: 80%;
+            width: 20%;
+        }
+    }
+}
+
+#menu {
+    display: inline-block;
+    z-index: 10;
+    position: fixed;
+    border: 1px solid black;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    background-color: white;
+
+    .nav {
+        margin-left: 43%;
+
+        .text_nav {
+            color: $color-text;
+            text-decoration: none;
+            font-family: 'AdineKirnberg';
+            font-style: 'regular';
+            font-size: 230%;
+        }
+    }
+}
+
+/*add_product*/
+#add_product {
+    display: inline-block;
+    margin-top: 10%;
+    margin-left: 30%;
+    border: 2px solid black;
+    width: 50%;
+    height: auto;
+
+    .button {
+        border-radius: 5px 5px 5px 5px;
+        background-color: $color-fon;
+    }
+
+    #chice_photo {
+        width: 40%;
+    }
+}
+
+/*add_product*/
+
+#footer {
+    margin-top: 20%;
+    background-color: $color-fon;
+
+    .row {
+        margin-left: 35%;
+
+        a {
+            margin-left: 2%;
+        }
+    }
+
+    .footer_text {
+        font-family: "amsterdam";
+        font-style: "regular";
+        font-size: 150%;
+        color: $color-text;
+    }
+}
+
+@media (min-width:360px) and (max-width:810px) {
+    #header {
+        .row {
+            .part_3 {
+                .nav {
+                    margin-left: 50%;
+                }
+            }
+        }
+    }
+
+    #menu {
+        .nav {
+            margin-left: 15%;
+        }
+    }
+
+    #footer {
+        .row {
+            margin-left: 1%;
+
+            .footer_text {
+                font-size: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width:768px) and (max-width:1020px) {
+    #header {
+        .row {
+            .part_1 {
+                .form-inline {
+                    .form-control {
+                        width: 60%;
+                    }
+                }
+            }
+
+            .part_2 {
+                .text_header {
+                    font-size: 120%;
+                }
+            }
+
+            .part_3 {
+                .nav {
+                    margin-left: 70%;
+                }
+            }
+        }
+    }
+
+    #menu {
+        .nav {
+            margin-left: 40%;
+        }
+    }
+
+    #footer {
+        .row {
+            margin-left: 30%;
+        }
+    }
+}
+
+@media (min-width:1024px) and (max-width:1360px) {
+    #header {
+        .row {
+            .part_2 {
+                .text_header {
+                    font-size: 140%;
+                }
+            }
+        }
+    }
+
+    #add_product {
+        margin-top: 20%;
+    }
+}

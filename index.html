@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Graduation work 2.0</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <!--bootsrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <!--bootstrap-->
+</head>
+
+<body>
+    <div id="header" class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 part_1">
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
+                    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Поиск</button>
+                </form>
+            </div>
+            <div class="col-md-4 part_2">
+                <img src="./images/pokeball-4.png" alt="pokeball-4">
+                <h2 class="text_header">Pokemon Store</h2>
+            </div>
+            <div class="col-md-4 part_3">
+                <div class="nav">
+                    <a href="./check_in/index.html" class="text_header"><img class="w-50 " src="./images/crowd-of-users.png"
+                            alt=""></a>
+                    <a href="./entrance/index.html" class="text_header"><img class="w-50 " src="./images/runer-silhouette-running-fast.png"
+                            alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="menu">
+        <ul class="nav">
+            <li><a href="#" class="text_nav">Главная</a></li>
+            <li><a href="./catalog/index.html" class="text_nav">Каталог</a></li>
+            <li><a href="./basket/basket.html" class="text_nav">Корзина</a></li>
+            <li><a href="./admin/administrator.html" class="text_nav">Администратор</a></li>
+        </ul>
+    </div>
+
+    <!--jquery-->
+    <script>
+        jQuery(function ($) {
+            function fixDiv() {
+                var $cache = $('#menu');
+                if ($(window).scrollTop() > 50)
+                    $cache.css({
+                        'position': 'fixed',
+                        'top': '0px'
+                    });
+                else
+                    $cache.css({
+                        'position': 'relative',
+                    });
+            }
+            $(window).scroll(fixDiv);
+            fixDiv();
+        });
+    </script>
+    <!--jquery-->
+
+    <div id="carouselExampleControls" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100" src="./images/pokemon_PNG160.png" alt="Первый слайд">
+            </div>
+            <div class="carousel-item">
+                <img class=" w-100" src="./images/pokemon_PNG154.png" alt="Второй слайд">
+            </div>
+            <div class="carousel-item">
+                <img class=" w-100" src="./images/pokemon_PNG153.png" alt="Третий слайд">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <img src="./images/back.png" class="w-50" alt="arrow">
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <img src="./images/next.png" class="w-50" alt="arrow">
+        </a>
+    </div>
+    <hr noshade>
+</body>
+<h2 align="center" class="text">Свежие поступления</h2>
+
+<div id="example" class="container-fluid">
+    <div class="row">
+        <div class="col-md-6"><a href="#"><img class="w-50" src="./images/blastoise.png" alt="blastoise"></a>
+        </div>
+        <div class="col-md-6">
+            <p>
+                <h2 class="text">
+                    <ul>
+                        <li class="none">Здоровье: 158</li>
+                        <li class="none">Атака: 186</li>
+                        <li class="none">Защита: 222 </li>
+                        <li class="none">Шанс поймать: 4%</li>
+                        <li class="none">Шанс сбежать: 5%</li>
+                        <li class="none">Макс.CP: 2542</li>
+                        <li class="none">Цена:10 рублей</li>
+                    </ul>
+                </h2>
+            </p>
+            <button class="button">Купить</button>
+            <button class="button">Заказать</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="./images/charizard.png" alt="charizard" class="w-50">
+        </div>
+        <div class="col-md-6">
+            <p>
+                <h2 class="text">
+                    <ul>
+                        <li class="none">Здоровье: 156</li>
+                        <li class="none">Атака: 212</li>
+                        <li class="none">Защита: 182</li>
+                        <li class="none">Макс. CP: 2602</li>
+                        <li class="none">Шанс поймать: 4%</li>
+                        <li class="none">Шанс сбежать: 5%</li>
+                        <li class="none">Цена: 10 рублей</li>
+                    </ul>
+                </h2>
+            </p>
+            <button class="button">Купить</button>
+            <button class="button">Заказать</button>
+        </div>
+    </div>
+</div>
+<hr noshade>
+<div id="about_as" class="container-fluid">
+    <h2 class="text" align="center">Не много онас</h2>
+    <h2 class="text" align="center">
+        Интернет-магазин Pokemon Store - это лучший магазин по продаже покемонов для игры pokemon go, именно с нами вы
+        сможите стать величайшим тренером покемонов.
+    </h2>
+</div>
+<hr noshade>
+
+<div id="footer" class="container-fluid">
+    <div class="row">
+        <h2 class="footer_text">Наши контакты :</h2>
+        <h2 class="footer_text">+375(29)845-14-16</h2>
+        <a href="#"><img src="./images/vk.png" class="w-50" alt="vkontacte"></a>
+    </div>
+</div>
+</htm>

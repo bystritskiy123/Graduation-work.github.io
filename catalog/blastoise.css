@@ -1,0 +1,168 @@
+@font-face {
+  font-family: "amsterdam";
+  src: url(./font/amsterdam.otf) format("opentype");
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("./font/open-sans.ttf") format("truetype");
+}
+@font-face {
+  font-family: "AdineKirnberg";
+  src: url("./font/adine-kirnberg.ttf") format("truetype");
+}
+@font-face {
+  font-family: "SchoolBook";
+  src: url("./font/schoolbook.ttf") format("truetype");
+}
+#header {
+  display: inline-block;
+  z-index: 10;
+}
+#header .row .part_1 .form-inline {
+  margin-top: 5%;
+  margin-left: 5%;
+}
+#header .row .part_2 img {
+  margin-left: 50%;
+}
+#header .row .part_2 h2 {
+  margin-left: 30%;
+  font-family: "schoolbook";
+  font-style: "regular";
+}
+#header .part_3 .nav {
+  margin-left: 80%;
+  width: 20%;
+}
+
+#menu {
+  display: inline-block;
+  z-index: 10;
+  position: fixed;
+  border: 1px solid black;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  background-color: white;
+}
+#menu .nav {
+  margin-left: 43%;
+}
+#menu .nav .text_nav {
+  color: black;
+  text-decoration: none;
+  font-family: "AdineKirnberg";
+  font-style: "regular";
+  font-size: 230%;
+}
+
+/*carousel*/
+.slide {
+  margin-left: 35%;
+  margin-top: 10%;
+  width: 35%;
+  height: auto;
+  display: inline-block;
+  position: relative;
+}
+
+/*carousel*/
+hr {
+  width: 50%;
+  padding: 0.1%;
+  color: black;
+}
+
+#Specifications {
+  display: inline-block;
+  position: relative;
+  margin-top: 3%;
+}
+#Specifications ul .none {
+  list-style-type: none;
+  font-family: "schoolbook";
+  font-style: "regular";
+}
+
+/*footer*/
+#footer {
+  margin-top: 5%;
+  background-color: red;
+}
+#footer .row {
+  margin-left: 23%;
+}
+#footer h2 {
+  margin-left: 1%;
+  size: 150%;
+}
+#footer .web {
+  margin-left: 5%;
+  margin-top: 0.5%;
+}
+
+@media (min-width: 360px) and (max-width: 810px) {
+  #header .row .part_2 .text_header {
+    margin-left: 25%;
+  }
+  #header .row .part_3 .nav {
+    margin-left: 50%;
+  }
+
+  #menu .nav {
+    margin-left: 17%;
+  }
+
+  #footer .row {
+    margin-left: 2%;
+  }
+  #footer .row h2 {
+    font-size: 100%;
+  }
+
+  #Specifications .none {
+    font-size: 90%;
+  }
+
+  #carouselExampleControls {
+    margin-top: 60%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1020px) {
+  #header .row .part_1 .form-inline .form-control {
+    width: 60%;
+  }
+  #header .row .part_2 .text_header {
+    font-size: 140%;
+  }
+  #header .row .part_3 .nav {
+    margin-left: 80%;
+  }
+
+  #menu .nav {
+    margin-left: 40%;
+  }
+
+  #carouselExampleControls {
+    margin-top: 10%;
+  }
+
+  #footer {
+    margin-top: 23%;
+  }
+  #footer .row {
+    margin-left: 30%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1366px) {
+  #header .row .part_2 .text_header {
+    font-size: 140%;
+  }
+
+  #footer {
+    margin-top: 37%;
+  }
+}
+/*footer*/
+
+/*# sourceMappingURL=blastoise.css.map */

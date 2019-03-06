@@ -1,0 +1,250 @@
+$color-text:black;
+$color-fon:red;
+
+@mixin header {
+    font-family: "schoolbook";
+    font-style: "regular";
+}
+
+@mixin card-text {
+    font-family: "schoolbook";
+    font-style: "regular";
+    font-size: 120%;
+}
+
+@mixin text {
+    font-family: "amsterdam";
+    font-style: "regular";
+    font-size: 120%;
+    color: $color-text;
+}
+
+@font-face {
+    font-family: 'amsterdam';
+    src: url(./font/amsterdam.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("./font/open-sans.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'AdineKirnberg';
+    src: url("./font/adine-kirnberg.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'SchoolBook';
+    src: url("./font/schoolbook.ttf") format("truetype");
+}
+
+#header {
+    display: inline-block;
+    z-index: 10;
+
+    .row {
+        .part_1 {
+            .form-inline {
+                margin-top: 5%;
+                margin-left: 5%;
+            }
+        }
+
+        .part_2 {
+            img {
+                margin-left: 50%;
+            }
+
+            h2 {
+                margin-left: 30%;
+                font-family: 'SchoolBook';
+                font-style: 'regular';
+            }
+        }
+    }
+
+    .part_3 {
+        .nav {
+            margin-left: 80%;
+            width: 20%;
+        }
+    }
+}
+
+#menu {
+    display: inline-block;
+    z-index: 10;
+    position: fixed;
+    border: 1px solid black;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    background-color: white;
+
+    .nav {
+        margin-left: 43%;
+
+        .text_nav {
+            color: $color-text;
+            text-decoration: none;
+            font-family: 'AdineKirnberg';
+            font-style: 'regular';
+            font-size: 230%;
+        }
+    }
+}
+
+/*table*/
+#table {
+    margin-top: 22%;
+    border: 1px solid black;
+
+    table {
+        .part_2 {
+            td {
+                width: 15%;
+            }
+
+            a {
+                img {
+                    width: 20%;
+                }
+            }
+
+            .button {
+                border-radius: 10px 10px 10px 10px;
+                background-color: $color-fon;
+            }
+        }
+    }
+}
+
+/*table*/
+
+/*footer*/
+#footer {
+    margin-top: 20%;
+    background-color: $color-fon;
+
+    .row {
+        margin-left: 40%;
+
+        .text {
+            @include text;
+        }
+    }
+
+    h2 {
+        margin-left: 1%;
+        margin-top: 1%;
+        size: 150%;
+    }
+
+    .web {
+        margin-left: 2%;
+        margin-top: 1%;
+    }
+}
+
+/*footer*/
+
+@media (min-width:360px) and (max-width:810px) {
+    #header {
+        .row {
+            .part_2 {
+                .text_header {
+                    margin-left: 20%;
+                }
+            }
+
+            .part_3 {
+                .nav {
+                    margin-left: 50%;
+                }
+            }
+        }
+    }
+
+    #menu {
+        .nav {
+            margin-left: 20%;
+        }
+    }
+
+    #table {
+        margin-top: 82%;
+    }
+
+    #footer {
+        margin-top: 90%;
+
+        .row {
+            margin-left: 1%;
+
+            h2 {
+                font-size: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width:768px) and (max-width:1020px) {
+    #header {
+        .row {
+            .part_1 {
+                .form-inline {
+                    .form-control {
+                        width: 60%;
+                    }
+                }
+            }
+
+            .part_2 {
+                .text_header {
+                    font-size: 150%;
+                }
+            }
+
+            .part_3 {
+                .nav {
+                    margin-left: 80%;
+                }
+            }
+        }
+    }
+
+    #menu {
+        .nav {
+            margin-left: 35%;
+        }
+    }
+
+    #table {
+        margin-top: 40%;
+    }
+
+    #footer {
+        margin-top: 63%;
+
+        .row {
+            margin-left: 30%;
+        }
+    }
+}
+
+@media (min-width:1024px) and (max-width:1360px) {
+    #header {
+        .row {
+            .part_2 {
+                .text_header {
+                    font-size: 150%;
+                }
+            }
+        }
+    }
+
+    #footer {
+        margin-top: 85%;
+    }
+}
